@@ -1,0 +1,73 @@
+<!--
+
+body {
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+/*	font-family: Verdana, Arial, Helvetica, sans-serif; */
+/*	font-family: Trebuchet MS, Verdana, Helvetica, sans-serif; */
+	color: #666;
+/*	letter-spacing: 1px;
+	line-height: 3em; */
+}
+.Blue{
+	color:#005AFF;
+}
+a, a:link, a:visited, a:active {
+	color: #666;
+	text-decoration: underline;
+}
+a:hover {
+	color: #333;
+	text-decoration: none;
+}
+a.link_menu, a.link_menu:link, a.link_menu:visited, a.link_menu:active {
+	color: #666;
+	text-decoration: none;
+}
+a.link_menu:hover {
+	color: #333;
+	text-decoration: overline;
+}
+a.link_box, a.link_box:link, a.link_box:visited, a.link_box:active {
+	color: #eee;
+	text-decoration: underline;
+}
+a.link_box:hover {
+	color: #eee;
+	text-decoration: none;
+}
+a.link_cpr, a.link_cpr:link, a.link_cpr:visited, a.link_cpr:active {
+	color: #aaa;
+	text-decoration: none;
+}
+a.link_cpr:hover {
+	color: #333;
+	text-decoration: none;
+}
+.t10 {
+	font-size: 10px;
+}
+.t11 {
+	font-size: 11px;
+}
+.t12 {
+	font-size: 12px;
+}
+.t13 {
+	font-size: 13px;
+}
+.t14 {
+	font-size: 14px;
+}
+.t15 {
+	font-size: 15px;
+}
+.t16 {
+	font-size: 16px;
+}
+.images-border div{
+				 border:1px solid #666666;
+				 width:140px;
+				 padding:10px;
+				 }
+-->

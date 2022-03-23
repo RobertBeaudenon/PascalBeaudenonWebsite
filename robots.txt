@@ -1,0 +1,25 @@
+# Directories to be ignored by all robots
+
+User-agent: * 
+
+Disallow: /adv/
+Disallow: /cgi-bin/
+Disallow: /control/
+Disallow: /directory/cgi-bin/
+Disallow: /invoice/
+Disallow: /list/
+Disallow: /mailinglist/
+Disallow: /payment/
+Disallow: /pics/
+Disallow: /pm/
+Disallow: /pubs/
+Disallow: /scripts/
+Disallow: /sites/
+Disallow: /sounds/
+Disallow: /webmail/
+
+
+
+# Rover is a bad dog <http://www.roverbot.com>
+User-agent: Roverbot
+Disallow: /

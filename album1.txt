@@ -1,0 +1,1 @@
+﻿desc1=PAGE 1&desc2=PAGE 1 - VERSO&desc3=PAGE 2&desc4=PAGE 2 - VERSO&desc5=PAGE 3&desc6=PAGE 3 - VERSO&desc7=PAGE 4&desc8=PAGE 4 - VERSO&desc9=PAGE 5&desc10=PAGE 5 - VERSO&
