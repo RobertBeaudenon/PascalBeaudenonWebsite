@@ -11,13 +11,15 @@ $(document).ready( function() {
 <title>Pascal Beaudenon - Landscape Photographies</title>
 <meta name="description" content="Official website of landscape photographer Pascal Beaudenon. Panoramic photographies from all over Lebanon.">
 <meta name="keywords" content="beaudenon,pascalbeaudenon,pascal beaudenon,landscape photography,landscape photographer,photo,photos,photographies,photographe,lebanon,photos lebanon,lebanon photos,liban,photos liban,liban photos,photographie panoramique,photo panoramique,photos panoramiques">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" CONTENT="en,fr">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Powered by ZWYX.org">
 <meta name="copyright" content="copyright (c) www.pascalbeaudenon.com">
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/gallery.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" src="js/main.js"></script>
+<script src="js/simple-gallery.js"></script>
 </head>
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -51,12 +53,25 @@ $(document).ready( function() {
 
 <table border="0" align="center" cellpadding="5" cellspacing="0">
   <tr>
-    <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="660" height="350">
-        <param name="movie" value="/album1.swf">
-        <param name="quality" value="high">
-        <embed src="album1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="660" height="350"></embed></object></td>
+    <td><div id="album1-gallery"></div></td>
   </tr>
 </table>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const album1Images = [
+        'album1/PAN_1.jpg', 'album1/PAN_2.jpg', 'album1/PAN_3.jpg', 'album1/PAN_4.jpg', 'album1/PAN_5.jpg',
+        'album1/PAN_6.jpg', 'album1/PAN_7.jpg', 'album1/PAN_8.jpg', 'album1/PAN_9.jpg', 'album1/PAN_10.jpg'
+    ];
+    
+    const album1Descriptions = [
+        'PAGE 1', 'PAGE 1 - VERSO', 'PAGE 2', 'PAGE 2 - VERSO', 'PAGE 3',
+        'PAGE 3 - VERSO', 'PAGE 4', 'PAGE 4 - VERSO', 'PAGE 5', 'PAGE 5 - VERSO'
+    ];
+    
+    new SimpleGallery('album1-gallery', album1Images, album1Descriptions);
+});
+</script>
 <table width="100" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
     <td><img src="pics/pixel.gif" width="1" height="1"></td>

@@ -11,13 +11,15 @@ $(document).ready( function() {
 <title>Pascal Beaudenon - Landscape Photographies</title>
 <meta name="description" content="Official website of landscape photographer Pascal Beaudenon. Panoramic photographies from all over Lebanon.">
 <meta name="keywords" content="beaudenon,pascalbeaudenon,pascal beaudenon,landscape photography,landscape photographer,photo,photos,photographies,photographe,lebanon,photos lebanon,lebanon photos,liban,photos liban,liban photos,photographie panoramique,photo panoramique,photos panoramiques">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" CONTENT="en,fr">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Powered by ZWYX.org">
 <meta name="copyright" content="copyright (c) www.pascalbeaudenon.com">
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/gallery.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" src="js/main.js"></script>
+<script src="js/simple-gallery.js"></script>
 </head>
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -52,12 +54,39 @@ $(document).ready( function() {
 <br>
 <table border="0" align="center" cellpadding="5" cellspacing="0">
   <tr>
-    <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="660" height="350">
-        <param name="movie" value="album2.swf">
-        <param name="quality" value="high">
-        <embed src="album2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="660" height="350"></embed></object></td>
+    <td><div id="album2-gallery"></div></td>
   </tr>
 </table>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const album2Images = [];
+    for (let i = 1; i <= 106; i++) {
+        album2Images.push('album2/PAN_' + i + '.jpg');
+    }
+    
+    // Basic descriptions for Lebanon landscape photos
+    const album2Descriptions = [
+        'Southerly direction towards the Jbab el Homr Valley and the Hermel Jurd (winter 2002-2003)',
+        'View of the Beqaa Valley and the Anti-Lebanon Range from above Dahr el Qadib (winter 2002-2003)',
+        'The east wind blowing over Wadi Udine from Mount Akrum, Aqqar area (spring 2003)',
+        'Rich cultivated land on the banks of the Qaraun Lake, West Beqaa (fall 2002)',
+        'The coastal waters of Jbeil, Byblos (summer 2003)',
+        '"The Cedars of God" (Arz al Rab), Bsharre (winter 2003-2004)',
+        'The "Cedars" slopes, Bsharre (winter 2003-2004)',
+        'An excursion with full gear, Mount Sannin (winter 2003-2004)',
+        'Stormy weather over Safra (fall 2003)',
+        'Spring grazing in Mount Haouerta, north of the Anti-Lebanon Range (spring 2003)'
+    ];
+    
+    // Fill remaining descriptions with generic text
+    while (album2Descriptions.length < 106) {
+        album2Descriptions.push('Lebanon Landscape Photography - Pascal Beaudenon');
+    }
+    
+    new SimpleGallery('album2-gallery', album2Images, album2Descriptions);
+});
+</script>
 <br>
 <br>
 <table width="100" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
