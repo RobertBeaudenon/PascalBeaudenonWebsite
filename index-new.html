@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal Beaudenon - Landscape Photography | Lebanon Panoramas</title>
+    <meta name="description" content="Discover the breathtaking landscape photography of Pascal Beaudenon. Panoramic views and natural beauty of Lebanon captured through the lens.">
+    <meta name="keywords" content="Pascal Beaudenon, landscape photography, Lebanon photography, panoramic photography, nature photography, Lebanese landscapes">
+    <meta name="author" content="Pascal Beaudenon">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">Pascal Beaudenon</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-main">Pascal Beaudenon</span>
+                <span class="logo-sub">Landscape Photography</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#exhibitions" class="nav-link">Exhibitions</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="images/home_pic.jpg" alt="Lebanese landscape by Pascal Beaudenon" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Capturing Lebanon's</span>
+                    <span class="hero-title-accent">Natural Beauty</span>
+                </h1>
+                <p class="hero-description">
+                    Panoramic landscape photography showcasing the diverse and breathtaking scenery of Lebanon, 
+                    from coastal waters to mountain peaks, captured through years of dedicated exploration.
+                </p>
+                <div class="hero-location">
+                    <span class="location-text">La réserve naturelle de Ammiq, Beqaa Ouest • Winter 2005</span>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#publications" class="btn btn-secondary">Publications</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Highlighting the essence of Lebanese landscapes</p>
+            </div>
+            
+            <div class="featured-grid">
+                <div class="featured-item featured-main">
+                    <a href="#publications" class="featured-link">
+                        <img src="images/book_new.jpg" alt="The Other Lebanon book cover" class="featured-image">
+                        <div class="featured-overlay">
+                            <div class="featured-content">
+                                <h3 class="featured-title">The Other Lebanon</h3>
+                                <p class="featured-description">L'Autre Liban</p>
+                                <span class="featured-year">December 2005</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="featured-item">
+                    <a href="#publications" class="featured-link">
+                        <img src="images/calender09.jpg" alt="2009 Calendar English cover" class="featured-image">
+                        <div class="featured-overlay">
+                            <div class="featured-content">
+                                <h3 class="featured-title">Calendar 2009</h3>
+                                <p class="featured-description">English Edition</p>
+                                <span class="featured-price">USD $14</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="featured-item">
+                    <a href="#publications" class="featured-link">
+                        <img src="images/calender09_2.jpg" alt="2009 Calendar French cover" class="featured-image">
+                        <div class="featured-overlay">
+                            <div class="featured-content">
+                                <h3 class="featured-title">Calendrier 2009</h3>
+                                <p class="featured-description">Édition Française</p>
+                                <span class="featured-price">USD $14</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Explore the diverse landscapes of Lebanon through panoramic photography</p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mountains">Mountains</button>
+                <button class="filter-btn" data-filter="valleys">Valleys</button>
+                <button class="filter-btn" data-filter="coastal">Coastal</button>
+                <button class="filter-btn" data-filter="seasons">Seasons</button>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be loaded dynamically -->
+            </div>
+            
+            <div class="portfolio-loading">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Publications</h2>
+                <p class="section-subtitle">Books, calendars, and printed collections</p>
+            </div>
+            
+            <div class="publications-grid">
+                <article class="publication-card">
+                    <div class="publication-image">
+                        <img src="images/book_new.jpg" alt="The Other Lebanon book" loading="lazy">
+                    </div>
+                    <div class="publication-content">
+                        <h3 class="publication-title">The Other Lebanon</h3>
+                        <p class="publication-subtitle">L'Autre Liban</p>
+                        <p class="publication-description">
+                            A comprehensive collection of landscape photographs showcasing the natural beauty 
+                            and diverse terrain of Lebanon, from mountain peaks to coastal regions.
+                        </p>
+                        <div class="publication-meta">
+                            <span class="publication-date">December 2005</span>
+                            <span class="publication-type">Photography Book</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </article>
+                
+                <article class="publication-card">
+                    <div class="publication-image">
+                        <img src="images/calender09.jpg" alt="2009 Calendar" loading="lazy">
+                    </div>
+                    <div class="publication-content">
+                        <h3 class="publication-title">Calendar 2009</h3>
+                        <p class="publication-subtitle">English Edition</p>
+                        <p class="publication-description">
+                            Twelve months of stunning Lebanese landscapes, featuring seasonal photography 
+                            that captures the changing beauty throughout the year.
+                        </p>
+                        <div class="publication-meta">
+                            <span class="publication-price">USD $14</span>
+                            <span class="publication-type">Wall Calendar</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Order Now</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Pascal Beaudenon</h2>
+                    <p class="about-description">
+                        Pascal Beaudenon is a landscape photographer specializing in panoramic photography 
+                        of Lebanon's diverse natural environments. With years of exploration across the country, 
+                        from the coastal regions of Jbeil to the mountain peaks of the Anti-Lebanon Range, 
+                        Pascal captures the essence of Lebanon's natural beauty.
+                    </p>
+                    <p class="about-description">
+                        His work documents the changing seasons, the play of light across landscapes, 
+                        and the untold stories of Lebanon's natural heritage. Through careful composition 
+                        and technical excellence, each photograph reveals the hidden beauty of familiar 
+                        and remote locations alike.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/home_pic.jpg" alt="Pascal Beaudenon photography" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">For inquiries, exhibitions, or print orders</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="exhibition">Exhibition Inquiry</option>
+                                <option value="prints">Print Orders</option>
+                                <option value="publication">Publication Inquiry</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Professional Inquiries</h4>
+                        <p>For exhibitions, publications, and commercial projects</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Print Orders</h4>
+                        <p>High-quality prints available in various sizes</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Workshops</h4>
+                        <p>Photography workshops and location guidance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-main">Pascal Beaudenon</span>
+                    <span class="logo-sub">Landscape Photography</span>
+                </div>
+                
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pascal Beaudenon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption">
+                <h4 class="lightbox-title"></h4>
+                <p class="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/modern-gallery.js"></script>
+    <script src="js/main-new.js"></script>
+    
+    <!-- Modern Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173790-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173790-2');
+    </script>
+</body>
+</html>

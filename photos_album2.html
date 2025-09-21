@@ -1,120 +1,327 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="js/jquery.rightClick.js"></script>
-<script type="text/javascript">
-$(document).ready( function() {		
-	$("html").noContext();
-});
-</script>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Pascal Beaudenon - Landscape Photographies</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pascal Beaudenon - Landscape Photographies of Lebanon</title>
 <meta name="description" content="Official website of landscape photographer Pascal Beaudenon. Panoramic photographies from all over Lebanon.">
 <meta name="keywords" content="beaudenon,pascalbeaudenon,pascal beaudenon,landscape photography,landscape photographer,photo,photos,photographies,photographe,lebanon,photos lebanon,lebanon photos,liban,photos liban,liban photos,photographie panoramique,photo panoramique,photos panoramiques">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Language" CONTENT="en,fr">
 <meta name="robots" content="index,follow">
-<meta name="author" content="Powered by ZWYX.org">
+<meta name="author" content="Pascal Beaudenon">
 <meta name="copyright" content="copyright (c) www.pascalbeaudenon.com">
-<link href="css/main.css" rel="stylesheet" type="text/css">
-<link href="css/gallery.css" rel="stylesheet" type="text/css">
-<script language="JavaScript" src="js/main.js"></script>
-<script src="js/simple-gallery.js"></script>
+
+<!-- Modern CSS -->
+<link href="css/main.css?v=2025" rel="stylesheet" type="text/css">
+
+<!-- Modern JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<br>
-<br>
-<table width="650" height="1" border="0" align="center" cellpadding="0" cellspacing="0">
-<tr>
-<td class="t12" align="right"><a href="contact.html" class="link_menu"><b>CONTACT</b></a></td>
-</tr>
-  <tr>
-    <td style="background:#cccccc;"><img src="pics/pixel.gif" width="1" height="1"></td>
-  </tr>
-</table>
-<br>
-<table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr valign="bottom"> 
-    <td width="470" class="t12"><a href="photos_album2.html" class="link_menu"><font color="#FF0000"><strong>PHOTOS</strong></font></a> 
-      <strong> &nbsp;-&nbsp; <a href="publications.html" class="link_menu">THE BOOK</a> &nbsp;-&nbsp; <a href="publications_calendar2009.html" class="link_menu">PUBLICATIONS</a> 
-      &nbsp;-&nbsp; <a href="exhibitons.html" class="link_menu">EXHIBITIONS</a> 
-      &nbsp;-&nbsp; <a href="info.html" class="link_menu">INFO</a> &nbsp;</td>
-    <td width="180" align="right"><a href=""><img src="pics/logo_pascal_beaudenon_0.gif" alt="Pascal Beaudenon - landscape photographies - photographies panoramiques" width="160" height="20" border="0"></a></td>
-  </tr>
-</table>
-<br>
-<table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr> 
-    <td width="287" class="t13">P h o t o g r a p h i e s</td>
-    <td width="363" align="right" valign="bottom" class="t10">The Other Lebanon / <em>L'Autre Liban</em></td>
-  </tr>
-</table>
+<body>
+  <!-- Modern Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="pics/logo_pascal_beaudenon_0.gif" alt="Pascal Beaudenon - Panoramic Landscapes of Lebanon">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="photos_album2.html" style="color: var(--lebanon-cedar); font-weight: 600;">Photos</a></li>
+        <li class="nav-dropdown">
+          <a href="publications.html">Publications <span class="dropdown-arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="publications.html">The Book</a></li>
+            <li><a href="publications_lebanon1_forword.html">Foreword</a></li>
+            <li><a href="publications_lebanon1_map.html">Book Details</a></li>
+            <li><a href="publications_calendar2009.html">Calendar 2009</a></li>
+            <li><a href="other-calendars.html">Other Calendars</a></li>
+            <li><a href="publications_postcards.html">Postcards</a></li>
+          </ul>
+        </li>
+        <li><a href="exhibitons.html">Exhibitions</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="contact.html" class="contact-btn">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-<br>
-<table border="0" align="center" cellpadding="5" cellspacing="0">
-  <tr>
-    <td><div id="album2-gallery"></div></td>
-  </tr>
-</table>
+  <!-- Photo Carousel -->
+  <section class="section" style="padding-top: 80px;">
+    <div class="container">
+      <!-- Gallery Header -->
+      <div class="gallery-header">
+        <div class="gallery-title-line">
+          <h2>Photographs</h2>
+          <span class="title-separator">—</span>
+          <p class="gallery-subtitle">The Other Lebanon / <em>L'Autre Liban</em></p>
+        </div>
+      </div>
+      
+      <div class="photo-carousel" id="photo-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Carousel slides will be generated by JavaScript -->
+          </div>
+          
+          <!-- Carousel Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" id="prev-btn">‹</button>
+            <button class="carousel-btn next-btn" id="next-btn">›</button>
+          </div>
+        </div>
+        
+        <!-- Carousel Navigation -->
+        <div class="carousel-nav">
+          <div class="carousel-description" id="carousel-description">
+            <h3 id="photo-title" style="display: none;"></h3>
+            <p id="photo-description">Loading...</p>
+          </div>
+        </div>
+        
+        <!-- Thumbnail Navigation -->
+        <div class="carousel-thumbnails" id="carousel-thumbnails">
+          <!-- Thumbnail navigation will be generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const album2Images = [];
-    for (let i = 1; i <= 106; i++) {
-        album2Images.push('album2/PAN_' + i + '.jpg');
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Pascal Beaudenon, 2025</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      const hamburger = document.querySelector('.hamburger');
+      
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
     }
-    
-    // Basic descriptions for Lebanon landscape photos
-    const album2Descriptions = [
-        'Southerly direction towards the Jbab el Homr Valley and the Hermel Jurd (winter 2002-2003)',
-        'View of the Beqaa Valley and the Anti-Lebanon Range from above Dahr el Qadib (winter 2002-2003)',
-        'The east wind blowing over Wadi Udine from Mount Akrum, Aqqar area (spring 2003)',
-        'Rich cultivated land on the banks of the Qaraun Lake, West Beqaa (fall 2002)',
-        'The coastal waters of Jbeil, Byblos (summer 2003)',
-        '"The Cedars of God" (Arz al Rab), Bsharre (winter 2003-2004)',
-        'The "Cedars" slopes, Bsharre (winter 2003-2004)',
-        'An excursion with full gear, Mount Sannin (winter 2003-2004)',
-        'Stormy weather over Safra (fall 2003)',
-        'Spring grazing in Mount Haouerta, north of the Anti-Lebanon Range (spring 2003)'
-    ];
-    
-    // Fill remaining descriptions with generic text
-    while (album2Descriptions.length < 106) {
-        album2Descriptions.push('Lebanon Landscape Photography - Pascal Beaudenon');
-    }
-    
-    new SimpleGallery('album2-gallery', album2Images, album2Descriptions);
-});
-</script>
-<br>
-<br>
-<table width="100" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td><img src="pics/pixel.gif" width="1" height="1"></td>
-  </tr>
-</table>
-<table width="650" height="1" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td style="background:#cccccc;"><img src="pics/pixel.gif" width="1" height="1"></td>
-  </tr>
-</table>
-<table width="651" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr> 
-    <td width="380" class="t10">&copy; pascal beaudenon, 2025</td>
-    <td width="271" align="right" class="t10">&nbsp;</td>
-  </tr>
-</table>
-<br>
-<br>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-173790-2");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.remove('active');
+        document.querySelector('.hamburger').classList.remove('active');
+      });
+    });
+
+    // Photo Carousel Implementation
+    document.addEventListener('DOMContentLoaded', async function() {
+      const carouselTrack = document.getElementById('carousel-track');
+      const thumbnailsContainer = document.getElementById('carousel-thumbnails');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const photoTitle = document.getElementById('photo-title');
+      const photoDescription = document.getElementById('photo-description');
+      
+      let currentSlideIndex = 0;
+      const totalSlides = 106;
+      
+      // Photo descriptions for Lebanon landscapes
+      let photoDescriptions = [];
+
+      // Fetch and parse descriptions
+      try {
+        const response = await fetch(`album2.txt?v=${new Date().getTime()}`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const text = await response.text();
+        const params = new URLSearchParams(text);
+        photoDescriptions = Array.from(params.values());
+      } catch (error) {
+        console.error('Failed to fetch photo descriptions:', error);
+        // Fallback to default descriptions if fetch fails
+        photoDescriptions = Array.from({ length: totalSlides }, (_, i) => `Lebanon Landscape Photography ${i + 1} - Pascal Beaudenon`);
+      }
+
+      // Create carousel slides
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = `
+          <img src="album2/PAN_${i}.jpg" alt="Panoramic View ${i}" loading="${i <= 3 ? 'eager' : 'lazy'}">
+        `;
+        carouselTrack.appendChild(slide);
+        
+        // Create thumbnail with enhanced mobile interaction
+        const thumbnail = document.createElement('div');
+        thumbnail.className = 'carousel-thumbnail';
+        thumbnail.innerHTML = `
+          <img src="album2-tn/PAN_${i}.jpg" alt="Thumbnail ${i}" loading="lazy">
+        `;
+        
+        // Add touch-friendly interaction
+        thumbnail.addEventListener('click', () => goToSlide(i - 1));
+        thumbnail.addEventListener('touchstart', (e) => {
+          e.target.closest('.carousel-thumbnail').style.transform = 'scale(0.95)';
+        }, { passive: true });
+        thumbnail.addEventListener('touchend', (e) => {
+          e.target.closest('.carousel-thumbnail').style.transform = '';
+          goToSlide(i - 1);
+        }, { passive: true });
+        thumbnail.addEventListener('touchcancel', (e) => {
+          e.target.closest('.carousel-thumbnail').style.transform = '';
+        }, { passive: true });
+        
+        thumbnailsContainer.appendChild(thumbnail);
+      }
+
+      function updateCarousel() {
+        // Update slide position
+        carouselTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        
+        // Update slide counter
+        
+        // Update description
+        const description = photoDescriptions[currentSlideIndex] || `Lebanon Landscape Photography ${currentSlideIndex + 1} - Pascal Beaudenon`;
+        photoTitle.textContent = ''; // Remove the title
+        photoDescription.textContent = description;
+        
+        // Update thumbnails
+        document.querySelectorAll('.carousel-thumbnail').forEach((thumb, index) => {
+          thumb.classList.toggle('active', index === currentSlideIndex);
+        });
+        
+        // Update button states
+        prevBtn.disabled = currentSlideIndex === 0;
+        nextBtn.disabled = currentSlideIndex === totalSlides - 1;
+      }
+
+      function goToSlide(index) {
+        currentSlideIndex = Math.max(0, Math.min(index, totalSlides - 1));
+        updateCarousel();
+      }
+
+      function nextSlide() {
+        if (currentSlideIndex < totalSlides - 1) {
+          currentSlideIndex++;
+          updateCarousel();
+        }
+      }
+
+      function prevSlide() {
+        if (currentSlideIndex > 0) {
+          currentSlideIndex--;
+          updateCarousel();
+        }
+      }
+
+      // Event listeners
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+      });
+      
+      // Enhanced touch/swipe support for mobile
+      let startX = 0;
+      let endX = 0;
+      let startY = 0;
+      let endY = 0;
+      let isSwipeActive = false;
+      
+      // Add visual feedback for touch
+      carouselTrack.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isSwipeActive = true;
+        
+        // Add visual feedback
+        carouselTrack.style.filter = 'brightness(0.95)';
+      }, { passive: true });
+      
+      carouselTrack.addEventListener('touchmove', (e) => {
+        if (!isSwipeActive) return;
+        
+        const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
+        const deltaX = Math.abs(currentX - startX);
+        const deltaY = Math.abs(currentY - startY);
+        
+        // If horizontal swipe is dominant, prevent vertical scroll
+        if (deltaX > deltaY && deltaX > 10) {
+          e.preventDefault();
+        }
+      });
+      
+      carouselTrack.addEventListener('touchend', (e) => {
+        if (!isSwipeActive) return;
+        
+        endX = e.changedTouches[0].clientX;
+        endY = e.changedTouches[0].clientY;
+        
+        const deltaX = startX - endX;
+        const deltaY = Math.abs(startY - endY);
+        
+        // Remove visual feedback
+        carouselTrack.style.filter = '';
+        isSwipeActive = false;
+        
+        // Only trigger swipe if horizontal movement is dominant and significant
+        if (Math.abs(deltaX) > 30 && Math.abs(deltaX) > deltaY) {
+          if (deltaX > 0) {
+            nextSlide(); // swipe left - next slide
+          } else {
+            prevSlide(); // swipe right - prev slide
+          }
+        }
+      }, { passive: true });
+      
+      // Handle touch cancel
+      carouselTrack.addEventListener('touchcancel', () => {
+        carouselTrack.style.filter = '';
+        isSwipeActive = false;
+      }, { passive: true });
+      
+      // Initialize carousel
+      updateCarousel();
+      
+      // Auto-scroll thumbnails to center current thumbnail
+      function scrollThumbnailsToCenter() {
+        const thumbnails = document.querySelectorAll('.carousel-thumbnail');
+        const activeThumbnail = thumbnails[currentSlideIndex];
+        if (activeThumbnail) {
+          activeThumbnail.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'nearest',
+            inline: 'center' 
+          });
+        }
+      }
+      
+      // Update scroll when slide changes
+      const originalUpdateCarousel = updateCarousel;
+      updateCarousel = function() {
+        originalUpdateCarousel();
+        setTimeout(scrollThumbnailsToCenter, 100);
+      };
+    });
+  </script>
+
+  <!-- Google Analytics (Updated) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173790-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-173790-2');
+  </script>
 </body>
 </html>

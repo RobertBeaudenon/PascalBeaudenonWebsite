@@ -1,0 +1,155 @@
+/* Panoramic Gallery Styles */
+/* Pascal Beaudenon Photography - Album 1 Panoramic Display */
+
+/* ===== PANORAMIC GALLERY SECTION ===== */
+.panoramic-gallery-section {
+  padding: var(--space-xl) 0;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+.gallery-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.gallery-navigation .btn-secondary {
+  position: absolute;
+  left: var(--space-md);
+}
+
+.gallery-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--lebanon-cedar);
+}
+
+.photo-count {
+  font-size: var(--font-size-sm);
+  color: var(--lebanon-stone);
+  opacity: 0.8;
+}
+
+/* ===== PANORAMIC DISPLAY ===== */
+.panoramic-display {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.panoramic-item {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.panoramic-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.panoramic-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--lebanon-cedar);
+  margin: 0;
+  padding: var(--space-lg) var(--space-xl);
+  background: linear-gradient(135deg, var(--lebanon-snow) 0%, #ffffff 100%);
+  border-bottom: 1px solid rgba(122, 122, 122, 0.1);
+  text-align: left;
+}
+
+.panoramic-image-container {
+  padding: var(--space-lg);
+  background: #fafafa;
+}
+
+.panoramic-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.panoramic-image:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .gallery-navigation {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+  
+  .gallery-info {
+    align-items: center;
+  }
+  
+  .panoramic-title {
+    font-size: var(--font-size-lg);
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+  }
+  
+  .panoramic-image-container {
+    padding: var(--space-md);
+  }
+  
+  .panoramic-display {
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .panoramic-gallery-section {
+    padding: var(--space-lg) 0;
+  }
+  
+  .panoramic-title {
+    font-size: var(--font-size-base);
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .panoramic-image-container {
+    padding: var(--space-sm);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .gallery-navigation {
+    display: none;
+  }
+  
+  .panoramic-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .panoramic-image {
+    box-shadow: none;
+  }
+}
